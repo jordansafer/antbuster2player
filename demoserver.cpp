@@ -22,7 +22,7 @@ int main()
     tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), 13));
 
 
-        for (;;)
+    for (;;)
     {
       tcp::socket socket(io_service);
       acceptor.accept(socket);
@@ -35,7 +35,7 @@ int main()
     }
   }
 
-    catch (std::exception& e)
+  catch (std::exception& e)
   {
     std::cerr << e.what() << std::endl;
   }
